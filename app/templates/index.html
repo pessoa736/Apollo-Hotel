@@ -1,0 +1,138 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block styles %} <link rel="stylesheet" href="{% static 'css/home.css' %}"> {% endblock %}
+
+    {% block content %}
+    <div class="main-container">
+        
+        <section class="hero">
+            <h1>Sobre Nós</h1>
+            <p>Conheça a história por trás de nosso Hotel!</p>
+        </section>
+
+        <section class="about">
+            <div class="about-container">
+
+                <div class="about-text">
+                    <p class="p-inicial"><span class="about-title">Nossa História</span> 
+                    lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in diam  nec leo posuere sodales. Sed scelerisque condimentum nulla vel suscipit. Integer pulvinar velit et quam auctor tempus. Ut maximus libero in  bibendum volutpat, scelerisque condimentum nulla vel suscipit.</p>
+            
+                    <p>Nullam viverra odio nec bibendum pellentesque.  Praesent lacinia purus risus, porttitor efficitur elit hendrerit et.  Etiam ligula nisi, efficitur in elit at, finibus tincidunt sapien. Ut  pharetra vitae tellus vel sodales. Ut euismod finibus ex, Integer pulvinar velit actor.</p>
+              
+                </div>
+          
+                <div class="about-images">
+                    <img src="{% static 'images/image3.png' %}" alt="Sobre Nós">
+                    <img src="{% static 'images/image4.png' %}" alt="Sobre Nós">
+                </div>
+          
+            </div>
+        </section>
+
+        <section class="mission">
+            <div class="mission-container">
+                
+                <div class="card">
+                  <div class="card-body">
+                    <img src="{% static 'icons/icon-circles.svg' %}" alt="Missão">
+                    <h1 class="card-subtitle mb-2 text-body-secondary">Missão</h1>
+                    <p class="card-text">porttitor efficitur elit hendrerit et. Praesent lacinia purus risus ut pharetra vitae tellus vel sodales linkus. Ut maximus libero in  bibendum.</p>
+                  </div>
+                </div>
+
+                <div class="card">
+                  <div class="card-body">
+                    <img src="{% static 'icons/icon-sparkles.svg' %}" alt="Missão">
+                    <h1 class="card-subtitle mb-2 text-body-secondary">Visão</h1>
+                    <p class="card-text">praesent lacinia purus risus, porttitor efficitur elit hendrerit et, sed scelerisque condimentum nulla ligula rito revali ascendum topum det mundum.</p>
+                  </div>
+                </div>
+
+                <div class="card">
+                  <div class="card-body">
+                    <img src="{% static 'icons/icon-heart.svg' %}" alt="Missão">
+                    <h1 class="card-subtitle mb-2 text-body-secondary">Valores</h1>
+                    <p class="card-text">nullam viverra odio nec bibendum pellentesque. Praesent lacinia purus risus. Euismod finibus ex integer, lorem ipsum dolor sit amet, bafum dat selvaegenus, lacrimat dut reinus.</p>
+                  </div>
+                </div>
+
+
+            </div>
+        </section>
+
+        <section class="team">
+            <div class="team-container">
+                
+                <h1>Nossa Equipe</h1>
+                <p>Conheça os profissionais mais talentosos da casa!</p>
+                
+                <div class="container-team-card">
+                    
+                    <div class="card-team">
+                        <img src="{% static 'images/funcionario1.png' %}" class="card-img-top" alt="Funcionário 1">
+                        <h1>Jean-Luc Moreau</h1>
+                        <p class="card-text">Hotel Manager</p>
+                    </div>
+            
+                    <div class="card-team">
+                        <img src="{% static 'images/funcionario2.png' %}" class="card-img-top" alt="Funcionário 2">
+                        <h1>Sophie Renault</h1>
+                        <p class="card-text">Executive Chef</p>
+                    </div>
+
+                    <div class="card-team">
+                        <img src="{% static 'images/funcionario3.png' %}" class="card-img-top" alt="Funcionário 3">
+                        <h1>Alessandro Rossi</h1>  
+                        <p class="card-text">Chef Concierge</p>
+                    </div>
+
+                    <div class="card-team">
+                        <img src="{% static 'images/funcionario4.png' %}" class="card-img-top" alt="Funcionário 4">
+                        <h1>Clotilde Martin</h1>
+                        <p class="card-text">Spa Director</p>
+                    </div>
+                </div>
+            
+            
+            </div>
+        </section>
+
+        <section class="services">
+            <div class="services-container">
+                <h1>Nossos Serviços</h1>
+
+                <div class="container-services-card">
+                    
+                    <div class="card-service">
+                        <img src="{% static 'images/img-services.png' %}" alt="Serviço 1">
+                        <div class="title-content">
+                            <h2>Title</h2>
+                        </div>
+                    </div>
+            
+                    <div class="card-service">
+                        <img src="{% static 'images/img-services.png' %}" alt="Serviço 2">
+                        <div class="title-content">
+                           <h2>Title</h2>
+                        </div>
+                    </div>
+
+                    <div class="card-service">
+                        <img src="{% static 'images/img-services.png' %}" alt="Serviço 3">
+                        <div class="title-content">
+                            <h2>Title</h2>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+    </div>
+    {% endblock %}
+
+</body>
+</html>
