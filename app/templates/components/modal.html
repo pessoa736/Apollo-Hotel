@@ -10,31 +10,31 @@
       <img src="{% static "icons/Logo.svg" %}" alt="Apollo Hotel">
     </div>
 
-    <form>
-
+    <form action="{% url 'reservations' %}" method="POST">
+      {% csrf_token %}
       <!-- Nome -->
       <div class="form-group">
         <label>Nome Completo</label>
-        <input type="text" placeholder="Digite aqui">
+        <input name="name" type="text" placeholder="Digite aqui">
       </div>
 
       <!-- Datas -->
       <div class="form-row">
         <div class="form-group">
           <label>Data de entrada</label>
-          <input type="date">
+          <input name="check_in" type="date">
         </div>
 
         <div class="form-group">
           <label>Data de saída</label>
-          <input type="date">
+          <input name="check_out" type="date">
         </div>
       </div>
 
       <!-- Categoria -->
       <div class="form-group">
         <label>Categoria de acomodação</label>
-        <select>
+        <select name="type_of_room">
           <option>Suíte Prince</option>
           <option>Casal</option>
           <option>Solteiro</option>
@@ -45,16 +45,16 @@
       <div class="form-row">
         <div class="form-group">
           <label>Adultos</label>
-          <input type="number" value="2">
+          <input name="adult" type="number" value="0">
         </div>
 
         <div class="form-group">
           <label>Crianças</label>
-          <input type="number" value="0">
+          <input name="child" type="number" value="0">
         </div>
       </div>
 
-      <button class="btn">Fazer Reserva</button>
+      <button type="submit" class="btn">Fazer Reserva</button>
 
     </form>
 

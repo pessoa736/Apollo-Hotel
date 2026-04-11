@@ -1,5 +1,6 @@
-from django.shortcuts import render
-from .models import Post
+from django.shortcuts import render, redirect
+from .models import Post, Reservation
+from django.http import HttpResponse
 
 # Create your views here.
 def base(request):
@@ -14,3 +15,26 @@ def blog(request):
 
 def about(request):
     return render(request, 'about.html')
+
+def reservations(request):
+    if request.method == 'POST':
+        
+        name = request.POST.get("name")
+        check_in = request.POST.get("check_in")
+        check_out = request.POST.get("check_out")
+        type_of_room = request.POST.get("type_of_room")
+        adult = request.POST.get("adult")
+        child = request.POST.get("child")
+        print(name, check_in, check_out, type_of_room, adult, child)
+        reserva = Reservation.objects.create(
+            name=name,
+            check_in=check_in,
+            check_out=check_out,
+            type_of_room=type_of_room,
+            adult=adult,
+            child=child
+        )
+        reserva.save()
+
+    return redirect('home')
+    
