@@ -1,0 +1,140 @@
+/* -- Global -- */
+@import "global.css";
+
+
+/* -- Geral -- */
+body {
+    font-family: var(--font-family);
+    background: var(--b1-color);
+}
+
+
+/* -- Navbar -- */
+.cutom-navbar {
+    display: flex;
+    width: 100%;
+}
+
+.navbar-content {
+    height: 104px;
+    width: 100%;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 34px;
+
+    background: var(--h2-color);
+
+    font-size: 32px;
+
+}
+
+.brand-navbar img {
+    height: 56px;
+}
+
+.navbar-menu {
+    display: flex;
+    justify-content: space-between;
+    gap: 130px;
+    align-items: center;
+    
+    list-style: none;
+}
+
+.navbar-menu a {
+    text-decoration: none;
+    color: var(--b1-color);
+}
+
+.navbar-item {
+    font-weight: 400;
+    font-size: 32px;
+}
+
+nav .btn-nav {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--b1-color);
+  background: var(--h3-color);
+  font-size: 28px;
+  padding: 12px 24px;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+nav .btn-nav:hover {
+  opacity: 0.8; 
+}
+
+/* -- footer -- */
+footer {
+  width: 100%;
+  background: var(--h3-color);
+  display: flex;
+  flex-direction: column;
+}
+
+footer .infos {
+  width: 100%;
+  padding: 48px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+footer .redes {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+footer .logo {
+  width: 132px;
+}
+
+.rede,
+.contato {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.rede img,
+.contato img {
+  width: 32px;
+}
+
+footer span {
+  font-size: 20px;
+  color: var(--b1-color);
+}
+
+.localizacao {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.localizacao img {
+  width: 264px;
+  height: 180px;
+  object-fit: cover;
+}
+
+.copy {
+  display: flex;
+  justify-content: center;
+}
+
+.copy .text {
+  border-top: 1px solid var(--b1-color);
+  display: flex;
+  gap: 48px;
+  align-items: center;
+  padding: 24px;
+}
+
+.copy img {
+  width: 33px;
+}

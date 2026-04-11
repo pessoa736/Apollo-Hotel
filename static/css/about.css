@@ -1,0 +1,268 @@
+@import "global.css";
+
+/* SECTION - HERO */
+.hero {
+    height: 400px;
+    width: 100%;
+    background: var(--h1-color);
+
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+}
+
+.hero h1 {
+    font-size: 64px;
+    font-weight: 700;
+    font-style: italic;
+    color: var(--h2-color);
+    margin-bottom: 64px;
+    margin-top: 64px;
+}
+
+.hero p {
+    font-size: 40px;
+    font-weight: 400;
+    color: var(--h2-color);
+}
+
+/* SECTION - ABOUT */
+.about {
+    height: 776px;
+    width: 100%;
+    background: var(--h2-color);
+
+    display: flex;
+    justify-content: center;
+    
+    align-items: center;
+}
+
+.about-container {
+  display: flex;
+  gap: 60px; /* espaço entre texto e imagens */
+  align-items: flex-start;
+  padding-left: 144px;
+  padding-right: 144px;
+  padding-bottom: 88px;
+  padding-top: 88px;
+}
+
+.about-images {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-text {
+  max-width: 500px;
+
+}
+
+.about-title {
+  font-weight: bold;
+  font-size: 40px;
+}
+
+.about-text p {
+    color: var(--b1-color);
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.p-inicial {
+    margin-bottom: 32px;
+}
+
+/* SECTION - MISSION */
+.mission {
+    height: 776px;
+    width: 100%;
+    background: var(--h3-color);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mission-container {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    margin-left: 86px;
+    margin-right: 86px;
+    margin-top: 142px;
+    margin-bottom: 142px;
+
+}
+
+.card {
+    width: 396px;
+    height: 492px;
+    background: var(--h2-color);
+    border-radius: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-body h1 {
+    font-size: 40px;
+    color: var(--b1-color);
+    
+    margin-bottom: 24px;
+}
+
+.card-body p {
+    font-size: 32px;
+    color: var(--b1-color);
+}
+
+.card-body img {
+    width: 64px;
+    height: 64px;
+
+    margin-bottom: 32px;
+
+}
+
+/* SECTION - TEAM */
+
+.team {
+    background: var(--h1-color);
+
+    display: flex;
+    justify-content: center;
+    
+}
+
+.team-container {
+    margin-top: 88px;
+    margin-bottom: 34px;
+}
+
+.team-container h1 {
+    text-align: center;
+    font-size: 64px;
+    font-style: bold;
+    color: var(--h3-color);
+
+    margin-bottom: 20px;
+
+
+}
+
+.team-container p {
+    font-size: 32px;
+    color: var(--h3-color);
+    margin-bottom: 67px;
+    text-align: center;
+} 
+
+.card-team img {
+    height: 360px;
+    border-radius: 32px;    
+}
+
+.card-team {
+    flex: 0 0 400px;
+    text-align: center;
+    
+}
+
+.card-team h1 {
+    font-size: 20px;
+    font-family: var(--font-inter);
+    font-weight: 700;
+
+    color: var(--h3-color);
+    margin-top: 20px;
+    margin-bottom: 8px;
+}
+
+.card-team p {
+    font-size: 16px;
+    font-family: var(--font-inter);
+    font-weight: 400;
+
+    margin-bottom: 32px;
+
+    color: var(--h3-color);
+}
+
+.container-team-card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    gap: 0 120px;
+    max-width: 920px;
+    
+}
+
+/* SECTION - SERVICES */
+
+.services {
+    background: var(--h2-color);
+    height: 576px;
+
+    display: flex;
+    justify-content: center;
+    
+}
+
+.services-container h1 {
+    font-size: 48px;
+    color: var(--b1-color);
+    font-weight: 700;
+
+    margin-top: 64px;
+    margin-bottom:39px;
+
+    text-align: center;
+    
+}
+
+.title-content {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-service h2 {
+    font-size: 25px;
+    color: var(--h3-color);
+    font-weight: 700;
+}
+
+.card-service {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    background: var(--b1-color);
+    border-radius: 32px;
+
+    width: 340px;
+    height: 340px;
+
+}
+
+.container-services-card {
+    display: flex;
+    justify-content: center;
+
+    gap: 0 66px;
+}
+

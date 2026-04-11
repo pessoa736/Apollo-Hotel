@@ -1,0 +1,118 @@
+@import url("global.css");
+
+/* ============================= */
+/* FUNDO */
+.modal {
+  z-index: 1;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+}
+
+/* CAIXA */
+.modal-content {
+  background: var(--b1-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 625px;
+  max-width: 90%;
+  height: 800px;
+
+  padding-left: 92px;
+  padding-right: 92px;
+  /* padding-bottom: 30px; */
+  /* padding-top: 80px; */
+
+  border-radius: 16px;
+  /* overflow-y: auto; */
+  position: relative;
+}
+
+.bi-x {
+    font-size: 48px;
+    color: var(--b2-color);
+}
+
+
+/* LOGO */
+.logo {
+  height: 96px;
+  width: 217.44px;
+
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: 63.5px;
+}
+
+/* FORM */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  /* margin-bottom: 32px; */
+}
+
+label {
+  margin-bottom: 16px;
+  font-size: 28px;
+  color: var(--h3-color);
+  font-weight: 500;
+}
+
+/* INPUTS */
+input,
+select {
+  height: 42px;
+  padding: 0 12px;
+
+  border: 2px solid var(--h3-color);
+  border-radius: 10px;
+
+  background: transparent;
+
+  margin-bottom: 32px;
+}
+
+/* LINHAS */
+.form-row {
+  display: flex;
+  gap: 16px;
+}
+
+.form-row .form-group {
+  flex: 1;
+}
+
+/* BOTÃO */
+.btn {
+  width: 100%;
+  height: 45px;
+
+  background: #5a2a2a;
+  color: white;
+
+  border: none;
+  border-radius: 10px;
+
+  font-weight: bold;
+  margin-top: 10px;
+
+  cursor: pointer;
+}
+
+/* FECHAR */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 18px;
+  font-size: 20px;
+  cursor: pointer;
+}
