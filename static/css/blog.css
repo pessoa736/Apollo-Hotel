@@ -6,7 +6,10 @@
 .hero {
   width: 100%;
   height: calc(100vh - 104px);
-  background: url("../../images/blog.png") center/cover no-repeat;
+  height: 720px;
+  background-image: url(../img/blog.png);
+  background-size: cover;
+  background-position: center;
 }
 
 .hero .info {
@@ -53,7 +56,7 @@
 /* MAIN */
 /* ============================= */
 main {
-  background: var(--b1-color);
+  background: var(--h1-color);
   width: 100%;
   text-align: center;
   padding: 64px 144px;
