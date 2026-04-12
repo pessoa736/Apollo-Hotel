@@ -1,0 +1,227 @@
+@import "global.css";
+/* ============================= */
+/* MAIN */
+/* ============================= */
+main {
+  background: var(--h1);
+  width: 100%;
+  text-align: center;
+  padding: 64px 144px;
+}
+
+/* ============================= */
+/* ARTICLE */
+/* ============================= */
+
+article {
+  background-color: var(--b1);
+  padding: 64px 182px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px #00000089;
+}
+
+article .titulo {
+  width: 100%;
+  border-bottom: 1px solid var(--h1);
+  text-align: left;
+}
+
+article h3 {
+  color: var(--h3);
+  font-size: 36px;
+  padding: 24px 0;
+}
+
+article .autor {
+  display: flex;
+  margin: 24px 0;
+}
+
+.autor img {
+  width: 80px;
+  height: 80px;
+  margin-right: 24px;
+}
+
+.autor .infos {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 8px;
+  color: var(--h3);
+  font-size: 20px;
+}
+
+.autor .infos span {
+  font-weight: bold;
+  font-style: italic;
+}
+
+.conteudo {
+  margin-top: 64px;
+}
+
+.conteudo .img-principal {
+  margin-bottom: 32px;
+}
+
+.conteudo img {
+  width: 100%;
+}
+
+.legenda {
+  width: 100%;
+  text-align: start;
+}
+
+.legenda span {
+  width: 50px;
+  height: 3px;
+  background: var(--h1);
+  border-radius: 3px;
+}
+
+.conteudo p {
+  font-size: 22px;
+  text-align: left;
+  margin-bottom: 24px;
+  text-indent: 40px;
+}
+
+.legenda > span {
+  font-size: 20px;
+  text-indent: 0;
+  background: none;
+}
+
+.conteudo h4 {
+  color: var(--h2);
+  font-size: 28px;
+  text-align: left;
+  text-indent: 40px;
+  font-style: italic;
+  margin: 32px 0;
+}
+
+.conteudo .img-texto {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+.img-texto .img-sec {
+  flex: 2;
+}
+
+.img-texto .texto {
+  flex: 1;
+}
+.img-texto .texto {
+  padding-left: 24px;
+}
+
+.botao {
+  display: flex;
+  width: 100%;
+  justify-content: end;
+  margin-top: 64px;
+}
+
+.botao button,
+.botao a {
+  display: inline-block;
+  text-decoration: none;
+  border: none;
+  color: var(--b1);
+  background-color: var(--h3);
+  font-size: 32px;
+  padding: 12px 24px;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.foto img {
+  border-radius: 50%;
+}
+
+/* ============================= */
+/* RESPONSIVIDADE LEVE */
+/* (mantém layout grande intacto) */
+/* ============================= */
+
+@media (max-width: 1768px) {
+  .conteudo .img-texto {
+    grid-template-columns: 1fr;
+  }
+
+  .conteudo .img-texto .texto {
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  main {
+    padding: 32px 16px;
+  }
+
+  article {
+    padding: 32px 16px;
+    border-radius: 8px;
+  }
+
+  article h3 {
+    font-size: 26px;
+    padding: 16px 0;
+  }
+
+  .autor {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .autor img {
+    margin: 0 0 16px 0;
+    width: 70px;
+    height: 70px;
+  }
+
+  .autor .infos {
+    align-items: center;
+    font-size: 18px;
+  }
+
+  .conteudo {
+    margin-top: 32px;
+  }
+
+  .conteudo p {
+    font-size: 18px;
+    text-indent: 24px;
+  }
+
+  .conteudo h4 {
+    font-size: 22px;
+    text-indent: 0;
+    margin: 24px 0;
+  }
+
+  .legenda > p {
+    font-size: 16px;
+  }
+
+  .conteudo .img-texto {
+    grid-template-columns: 1fr;
+  }
+
+  .botao {
+    justify-content: center;
+    margin-top: 40px;
+  }
+
+  .botao button {
+    font-size: 22px;
+    padding: 10px 20px;
+  }
+}

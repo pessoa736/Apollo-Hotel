@@ -7,14 +7,14 @@
 
   {% block content %}
     <!-- ================= HERO ================= -->
-    <section class="hero">
+    <section class="hero" style="background-image: url('{{ blog.image.url }}'); background-position: center; background-size: cover; background-repeat: no-repeat;">
       <div class="info">
         <h1>Destinos a dois perto de você</h1>
         <h3>
           Dicas lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
           mollis donec, tellus sed eu scelerisque...
         </h3>
-        <button type="button">Ler mais</button>
+        <button type="button">Ler Mais</button>
       </div>
     </section>
 
@@ -38,7 +38,7 @@
 
             <div class="infos">
               <time class="data" datetime="{{ post.created_at|date:'Y-m-d' }}">{{ post.created_at|date:'d/m/Y' }}</time>
-              <button type="button">Ler Mais</button>
+              <a href="{% url 'details' post.pk %}">Ler mais</a>
             </div>
           </div>
         </article>

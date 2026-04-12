@@ -9,12 +9,12 @@
 /* Variaveis */
 
 :root {
-    --h1-color: #F2a49e;
-    --h2-color: #8c3933;
-    --h3-color: #54221e;
-    --b1-color: #FFFFFF;
-    --b2-color: #818181;
-    --b3-color: #000000;
+    --h1: #F2a49e;
+    --h2: #8c3933;
+    --h3: #54221e;
+    --b1: #FFFFFF;
+    --b2: #818181;
+    --b3: #000000;
     
     --font-family: 'CrimsonPro', sans-serif;
     --font-inter: 'Inter', sans-serif;
