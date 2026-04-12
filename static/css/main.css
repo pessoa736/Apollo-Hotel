@@ -5,7 +5,7 @@
 /* -- Geral -- */
 body {
     font-family: var(--font-family);
-    background: var(--b1-color);
+    background: var(--b1);
 }
 
 
@@ -24,7 +24,7 @@ body {
     align-items: center;
     padding: 34px;
 
-    background: var(--h2-color);
+    background: var(--h2);
 
     font-size: 32px;
 
@@ -45,7 +45,7 @@ body {
 
 .navbar-menu a {
     text-decoration: none;
-    color: var(--b1-color);
+    color: var(--b1);
 }
 
 .navbar-item {
@@ -56,8 +56,8 @@ body {
 nav .btn-nav {
   display: inline-block;
   text-decoration: none;
-  color: var(--b1-color);
-  background: var(--h3-color);
+  color: var(--b1);
+  background: var(--h3);
   font-size: 28px;
   padding: 12px 24px;
   border-radius: 12px;
@@ -71,7 +71,7 @@ nav .btn-nav:hover {
 /* -- footer -- */
 footer {
   width: 100%;
-  background: var(--h3-color);
+  background: var(--h3);
   display: flex;
   flex-direction: column;
 }
@@ -90,7 +90,8 @@ footer .redes {
 }
 
 footer .logo {
-  width: 132px;
+  width: 126.84px;
+  height: 56px;
 }
 
 .rede,
@@ -107,7 +108,7 @@ footer .logo {
 
 footer span {
   font-size: 20px;
-  color: var(--b1-color);
+  color: var(--b1);
 }
 
 .localizacao {
@@ -128,7 +129,7 @@ footer span {
 }
 
 .copy .text {
-  border-top: 1px solid var(--b1-color);
+  border-top: 1px solid var(--b1);
   display: flex;
   gap: 48px;
   align-items: center;

@@ -6,4 +6,5 @@ urlpatterns = [
     path('blog/', blog, name='blog'),
     path('sobre/', about, name='about'),
     path('reservas/', reservations, name='reservations'),
+    path('detalhes/<int:pk>/', details, name='details'),
 ]

@@ -1,15 +1,11 @@
-@import "global.css";
-
+@import 'global.css';
 /* ============================= */
 /* HERO */
 /* ============================= */
 .hero {
   width: 100%;
   height: calc(100vh - 104px);
-  height: 720px;
-  background-image: url(../img/blog.png);
-  background-size: cover;
-  background-position: center;
+  background: url("../../src/images/blog.png") center/cover no-repeat;
 }
 
 .hero .info {
@@ -26,21 +22,21 @@
 }
 
 .hero h1 {
-  color: var(--b1-color);
+  color: var(--b1);
   font-size: 64px;
 }
 
 .hero h3 {
-  color: var(--b1-color);
+  color: var(--b1);
   width: 758px;
   font-size: 48px;
   font-weight: normal;
 }
 
-.hero button {
+.hero button, .hero a {
   padding: 12px 24px;
-  background: var(--h3-color);
-  color: var(--b1-color);
+  background: var(--h3);
+  color: var(--b1);
   border: none;
   border-radius: 12px;
   font-size: 32px;
@@ -56,7 +52,7 @@
 /* MAIN */
 /* ============================= */
 main {
-  background: var(--h1-color);
+  background: var(--h1);
   width: 100%;
   text-align: center;
   padding: 64px 144px;
@@ -64,7 +60,7 @@ main {
 
 main h2 {
   font-size: 40px;
-  color: var(--h2-color);
+  color: var(--h2);
   font-style: italic;
   margin-bottom: 64px;
 }
@@ -79,13 +75,13 @@ main h2 {
 .card {
   width: 512px;
   height: 540px;
-  background: var(--b1-color);
+  background: var(--b1);
   border-radius: 12px;
   display: flex;
   flex-direction: column;
   overflow: hidden;
   margin-bottom: 128px;
-  box-shadow: 0px 10px 10px rgba(52, 52, 52, 0.61);
+  box-shadow: 0px 10px 10px #3434349c;
 }
 
 .card .img {
@@ -110,7 +106,7 @@ main h2 {
 
 .card h4 {
   font-size: 28px;
-  color: var(--h2-color);
+  color: var(--h2);
   text-align: left;
 }
 
@@ -122,6 +118,8 @@ main h2 {
 .card .infos {
   position: absolute;
   bottom: 24px;
+  left: 24px;
+  right: 24px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -129,41 +127,25 @@ main h2 {
 
 .data {
   font-size: 25px;
-  color: var(--h2-color);
-  padding-right: 160px;
+  color: var(--h2);
+  padding-right: 0;
 }
 
-.card button {
+.card .infos button {
   padding: 12px 24px;
-  background: var(--h3-color);
-  color: var(--b1-color);
+  background: var(--h3);
+  color: var(--b1);
   border: none;
   border-radius: 12px;
   font-size: 24px;
   cursor: pointer;
   transition: 0.3s;
+  white-space: nowrap;
+  min-width: max-content;
 }
 
 .card button:hover {
   opacity: 0.85;
-}
-
-/* ============================= */
-/* RESPONSIVIDADE LEVE */
-/* (mantém layout grande intacto) */
-/* ============================= */
-
-@media (max-width: 1400px) {
-  nav .btn-nav {
-    font-size: 26px;
-  }
-  .hero h1 {
-    font-size: 48px;
-  }
-  .hero h3 {
-    font-size: 34px;
-    width: 90%;
-  }
 }
 
 @media (max-width: 1100px) {
@@ -175,13 +157,140 @@ main h2 {
   }
 }
 
-@media (max-width: 800px) {
-  nav ul {
-    flex-wrap: wrap;
-    gap: 16px;
+@media (max-width: 1768px) {
+  .hero {
+    height: calc(100vh - 60px);
   }
-  footer .infos {
-    grid-template-columns: 1fr;
+
+  .hero .info {
+    background: #0000009f;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    padding: 20px;
     text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 42px;
+    color: var(--b1);
+  }
+  .hero h3 {
+    font-size: 26px;
+    width: 50%;
+    color: var(--b1);
+  }
+
+  .hero button {
+    font-size: 22px;
+    padding: 10px 20px;
+    background: var(--h3);
+    color: var(--b1);
+    border: none;
+    border-radius: 10px;
+  }
+
+  main {
+    padding: 48px 48px;
+    background: var(--h1);
+  }
+
+  main h2 {
+    font-size: 32px;
+    margin-bottom: 48px;
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+
+  .card {
+    width: 70%;
+    height: 480px;
+  }
+
+  .card-body {
+    padding: 20px;
+  }
+
+  .card h4 {
+    font-size: 24px;
+  }
+  .card p {
+    font-size: 20px;
+  }
+
+  .data {
+    font-size: 20px;
+  }
+
+  .card button {
+    font-size: 20px;
+    padding: 10px 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: 60vh;
+  }
+
+  .hero .info {
+    gap: 20px;
+    padding: 16px;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+  .hero h3 {
+    font-size: 20px;
+    width: 100%;
+  }
+
+  .hero button {
+    font-size: 20px;
+    padding: 10px 18px;
+  }
+
+  main {
+    padding: 32px 16px;
+  }
+
+  main h2 {
+    font-size: 26px;
+    margin-bottom: 32px;
+  }
+
+  .cards {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .card {
+    width: 100%;
+    height: auto;
+  }
+
+  .card-body {
+    padding: 18px;
+    padding-bottom: 82px;
+  }
+
+  .card h4 {
+    font-size: 22px;
+  }
+  .card p {
+    font-size: 18px;
+  }
+
+  .data {
+    font-size: 18px;
   }
 }

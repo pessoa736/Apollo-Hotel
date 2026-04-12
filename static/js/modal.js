@@ -16,6 +16,6 @@ span.onclick = function() {
 // Fechar clicando fora
 window.onclick = function(event) {
   if (event.target == modal) {
-    modal.style.display = "flex";
+    modal.style.display = "none";
   }
 }

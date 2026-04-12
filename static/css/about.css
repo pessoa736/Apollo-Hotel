@@ -4,7 +4,7 @@
 .hero {
     height: 400px;
     width: 100%;
-    background: var(--h1-color);
+    background: var(--h1);
 
     display: flex;
     flex-direction: column;
@@ -16,7 +16,7 @@
     font-size: 64px;
     font-weight: 700;
     font-style: italic;
-    color: var(--h2-color);
+    color: var(--h2);
     margin-bottom: 64px;
     margin-top: 64px;
 }
@@ -24,14 +24,14 @@
 .hero p {
     font-size: 40px;
     font-weight: 400;
-    color: var(--h2-color);
+    color: var(--h2);
 }
 
 /* SECTION - ABOUT */
 .about {
     height: 776px;
     width: 100%;
-    background: var(--h2-color);
+    background: var(--h2);
 
     display: flex;
     justify-content: center;
@@ -65,7 +65,7 @@
 }
 
 .about-text p {
-    color: var(--b1-color);
+    color: var(--b1);
     font-size: 32px;
     font-style: normal;
     font-weight: 400;
@@ -79,7 +79,7 @@
 .mission {
     height: 776px;
     width: 100%;
-    background: var(--h3-color);
+    background: var(--h3);
 
     display: flex;
     justify-content: center;
@@ -100,7 +100,7 @@
 .card {
     width: 396px;
     height: 492px;
-    background: var(--h2-color);
+    background: var(--h2);
     border-radius: 32px;
     display: flex;
     flex-direction: column;
@@ -117,14 +117,14 @@
 
 .card-body h1 {
     font-size: 40px;
-    color: var(--b1-color);
+    color: var(--b1);
     
     margin-bottom: 24px;
 }
 
 .card-body p {
     font-size: 32px;
-    color: var(--b1-color);
+    color: var(--b1);
 }
 
 .card-body img {
@@ -138,7 +138,7 @@
 /* SECTION - TEAM */
 
 .team {
-    background: var(--h1-color);
+    background: var(--h1);
 
     display: flex;
     justify-content: center;
@@ -154,7 +154,7 @@
     text-align: center;
     font-size: 64px;
     font-style: bold;
-    color: var(--h3-color);
+    color: var(--h3);
 
     margin-bottom: 20px;
 
@@ -163,7 +163,7 @@
 
 .team-container p {
     font-size: 32px;
-    color: var(--h3-color);
+    color: var(--h3);
     margin-bottom: 67px;
     text-align: center;
 } 
@@ -184,7 +184,7 @@
     font-family: var(--font-inter);
     font-weight: 700;
 
-    color: var(--h3-color);
+    color: var(--h3);
     margin-top: 20px;
     margin-bottom: 8px;
 }
@@ -196,7 +196,7 @@
 
     margin-bottom: 32px;
 
-    color: var(--h3-color);
+    color: var(--h3);
 }
 
 .container-team-card {
@@ -212,7 +212,7 @@
 /* SECTION - SERVICES */
 
 .services {
-    background: var(--h2-color);
+    background: var(--h2);
     height: 576px;
 
     display: flex;
@@ -222,7 +222,7 @@
 
 .services-container h1 {
     font-size: 48px;
-    color: var(--b1-color);
+    color: var(--b1);
     font-weight: 700;
 
     margin-top: 64px;
@@ -241,7 +241,7 @@
 
 .card-service h2 {
     font-size: 25px;
-    color: var(--h3-color);
+    color: var(--h3);
     font-weight: 700;
 }
 
@@ -251,7 +251,7 @@
     align-items: center;
     text-align: center;
 
-    background: var(--b1-color);
+    background: var(--b1);
     border-radius: 32px;
 
     width: 340px;
@@ -266,3 +266,103 @@
     gap: 0 66px;
 }
 
+/* ================= NOTEBOOK ================= */
+@media (max-width: 1768px) {
+  .hero-sobre h1 {
+    font-size: 56px;
+  }
+  .hero-sobre p {
+    font-size: 26px;
+  }
+
+  .historia-texto p {
+    font-size: 22px;
+    text-indent: 40px;
+    margin-bottom: 40px;
+  }
+
+  .card {
+    font-size: 22px;
+  }
+  .equipe,
+  .servicos {
+    font-size: 28px;
+  }
+  .servico span {
+    font-size: 26px;
+  }
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+  /* HERO */
+  .hero-sobre {
+    padding: 60px 20px;
+  }
+
+  .hero-sobre h1 {
+    font-size: 34px;
+  }
+
+  .hero-sobre p {
+    font-size: 18px;
+  }
+
+  /* HISTÓRIA */
+  .historia {
+    padding: 60px 25px;
+  }
+
+  .historia-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .historia-texto p {
+    font-size: 18px;
+    margin-bottom: 25px;
+  }
+
+  /* CARDS */
+  .mvv {
+    padding: 60px 25px;
+  }
+
+  .cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card {
+    padding: 25px;
+    font-size: 18px;
+  }
+
+  /* EQUIPE */
+  .equipe {
+    padding: 60px 25px;
+    font-size: 26px;
+  }
+
+  .equipe-grid {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* SERVIÇOS */
+  .servicos {
+    padding: 60px 25px;
+    font-size: 26px;
+  }
+
+  .servicos-grid {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .servico span {
+    font-size: 20px;
+  }
+}
