@@ -31,7 +31,7 @@ def about(request):
     mission = Mission.objects.all()
     equipe = Equipe.objects.all()
     services = Services.objects.all()
-    return render(request, 'about.html', {'history': history, 'mission': mission, 'equipe': equipe, 'services': services})
+    return render(request, 'about.html', {'history': history, 'mission': mission, 'equipes': equipe, 'services': services})
 
 
 

@@ -23,11 +23,13 @@
                     <p>Nullam viverra odio nec bibendum pellentesque.  Praesent lacinia purus risus, porttitor efficitur elit hendrerit et.  Etiam ligula nisi, efficitur in elit at, finibus tincidunt sapien. Ut  pharetra vitae tellus vel sodales. Ut euismod finibus ex, Integer pulvinar velit actor.</p>
               
                 </div>
-          
+                
                 <div class="about-images">
-                    <img src="{% static 'images/image3.png' %}" alt="Sobre Nós">
-                    <img src="{% static 'images/image4.png' %}" alt="Sobre Nós">
+                {% for history in history %}
+                    <img src="{{ history.image.url }}" alt="Sobre Nós">
+                    {% endfor %}
                 </div>
+                
           
             </div>
         </section>
@@ -70,30 +72,13 @@
                 <p>Conheça os profissionais mais talentosos da casa!</p>
                 
                 <div class="container-team-card">
-                    
+                    {% for equipe in equipes %}
                     <div class="card-team">
-                        <img src="{% static 'images/funcionario1.png' %}" class="card-img-top" alt="Funcionário 1">
-                        <h1>Jean-Luc Moreau</h1>
-                        <p class="card-text">Hotel Manager</p>
-                    </div>
-            
-                    <div class="card-team">
-                        <img src="{% static 'images/funcionario2.png' %}" class="card-img-top" alt="Funcionário 2">
-                        <h1>Sophie Renault</h1>
-                        <p class="card-text">Executive Chef</p>
-                    </div>
-
-                    <div class="card-team">
-                        <img src="{% static 'images/funcionario3.png' %}" class="card-img-top" alt="Funcionário 3">
-                        <h1>Alessandro Rossi</h1>  
-                        <p class="card-text">Chef Concierge</p>
-                    </div>
-
-                    <div class="card-team">
-                        <img src="{% static 'images/funcionario4.png' %}" class="card-img-top" alt="Funcionário 4">
-                        <h1>Clotilde Martin</h1>
-                        <p class="card-text">Spa Director</p>
-                    </div>
+                        <img src="{{ equipe.image.url }}" class="card-img-top" alt="Funcionário 1">
+                        <h1>{{ equipe.name }}</h1>
+                        <p class="card-text">{{ equipe.role }}</p>
+                    </div>                    
+                    {% endfor %}
                 </div>
             
             
@@ -105,28 +90,14 @@
                 <h1>Nossos Serviços</h1>
 
                 <div class="container-services-card">
-                    
+                    {% for service in services %}
                     <div class="card-service">
-                        <img src="{% static 'images/img-services.png' %}" alt="Serviço 1">
+                        <img src="{{ service.image.url }}" alt="Serviço 1">
                         <div class="title-content">
-                            <h2>Title</h2>
+                            <h2>{{ service.title }}</h2>
                         </div>
                     </div>
-            
-                    <div class="card-service">
-                        <img src="{% static 'images/img-services.png' %}" alt="Serviço 2">
-                        <div class="title-content">
-                           <h2>Title</h2>
-                        </div>
-                    </div>
-
-                    <div class="card-service">
-                        <img src="{% static 'images/img-services.png' %}" alt="Serviço 3">
-                        <div class="title-content">
-                            <h2>Title</h2>
-                        </div>
-
-                    </div>
+                    {% endfor %}
 
                 </div>
             </div>

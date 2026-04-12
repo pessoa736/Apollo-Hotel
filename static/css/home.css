@@ -120,15 +120,39 @@
 }
 
 .pacotes-imagens {
+  position: relative;
   width: 50%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
+  height: 320px;
 }
 
 .pacotes-imagens img {
-  width: 100%;
-  border-radius: 8px;
+  position: absolute;
+  object-fit: cover;
+}
+
+/* imagem grande (principal) */
+.pacotes-imagens img:nth-child(1) {
+  width: 260px;
+  height: 180px;
+  z-index: 0.1;
+  top: 100px;
+  left: 0;
+}
+
+/* topo direita */
+.pacotes-imagens img:nth-child(2) {
+  width: 260px;
+  height: 180px;
+  top: 0;
+  right: 100px;
+}
+
+/* meio direita */
+.pacotes-imagens img:nth-child(3) {
+  width: 260px;
+  height: 180px;
+  bottom: 0;
+  right: 100px;
 }
 
 /* ================= GALERIA ================= */

@@ -37,11 +37,11 @@
            <p>Descubra várias oportunidades com até 30% de desconto!</p>
            <a href="#" class="btn-primary">Saiba mais</a>
          </div>
-         {% for package in packages %}
          <div class="pacotes-imagens">
+         {% for package in packages %}
            <img src="{{ package.image.url }}"/>
+           {% endfor %}
           </div>
-         {% endfor %}
        </div>
      </section>
 

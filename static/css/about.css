@@ -2,41 +2,41 @@
 
 /* SECTION - HERO */
 .hero {
-    height: 400px;
-    width: 100%;
-    background: var(--h1);
+  height: 400px;
+  width: 100%;
+  background: var(--h1);
 
-    display: flex;
-    flex-direction: column;
-    
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
 }
 
 .hero h1 {
-    font-size: 64px;
-    font-weight: 700;
-    font-style: italic;
-    color: var(--h2);
-    margin-bottom: 64px;
-    margin-top: 64px;
+  font-size: 64px;
+  font-weight: 700;
+  font-style: italic;
+  color: var(--h2);
+  margin-bottom: 64px;
+  margin-top: 64px;
 }
 
 .hero p {
-    font-size: 40px;
-    font-weight: 400;
-    color: var(--h2);
+  font-size: 40px;
+  font-weight: 400;
+  color: var(--h2);
 }
 
 /* SECTION - ABOUT */
 .about {
-    height: 776px;
-    width: 100%;
-    background: var(--h2);
+  height: 776px;
+  width: 100%;
+  background: var(--h2);
 
-    display: flex;
-    justify-content: center;
-    
-    align-items: center;
+  display: flex;
+  justify-content: center;
+
+  align-items: center;
 }
 
 .about-container {
@@ -53,10 +53,14 @@
   display: flex;
   flex-direction: column;
 }
+.about-images img {
+  width: 400px; /* controla o tamanho */
+  height: 300px;
+  object-fit: cover;
+}
 
 .about-text {
   max-width: 500px;
-
 }
 
 .about-title {
@@ -65,205 +69,202 @@
 }
 
 .about-text p {
-    color: var(--b1);
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 400;
+  color: var(--b1);
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
 }
 
 .p-inicial {
-    margin-bottom: 32px;
+  margin-bottom: 32px;
 }
 
 /* SECTION - MISSION */
 .mission {
-    height: 776px;
-    width: 100%;
-    background: var(--h3);
+  height: 776px;
+  width: 100%;
+  background: var(--h3);
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .mission-container {
-    display: flex;
-    gap: 40px;
-    align-items: flex-start;
-    margin-left: 86px;
-    margin-right: 86px;
-    margin-top: 142px;
-    margin-bottom: 142px;
-
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  margin-left: 86px;
+  margin-right: 86px;
+  margin-top: 142px;
+  margin-bottom: 142px;
 }
 
 .card {
-    width: 396px;
-    height: 492px;
-    background: var(--h2);
-    border-radius: 32px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    text-align: center;
+  width: 396px;
+  height: 492px;
+  background: var(--h2);
+  border-radius: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
 }
 
 .card-body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .card-body h1 {
-    font-size: 40px;
-    color: var(--b1);
-    
-    margin-bottom: 24px;
+  font-size: 40px;
+  color: var(--b1);
+
+  margin-bottom: 24px;
 }
 
 .card-body p {
-    font-size: 32px;
-    color: var(--b1);
+  font-size: 32px;
+  color: var(--b1);
 }
 
 .card-body img {
-    width: 64px;
-    height: 64px;
+  width: 64px;
+  height: 64px;
 
-    margin-bottom: 32px;
-
+  margin-bottom: 32px;
 }
 
 /* SECTION - TEAM */
 
 .team {
-    background: var(--h1);
+  background: var(--h1);
 
-    display: flex;
-    justify-content: center;
-    
+  display: flex;
+  justify-content: center;
 }
 
 .team-container {
-    margin-top: 88px;
-    margin-bottom: 34px;
+  margin-top: 88px;
+  margin-bottom: 34px;
 }
 
 .team-container h1 {
-    text-align: center;
-    font-size: 64px;
-    font-style: bold;
-    color: var(--h3);
+  text-align: center;
+  font-size: 64px;
+  font-style: bold;
+  color: var(--h3);
 
-    margin-bottom: 20px;
-
-
+  margin-bottom: 20px;
 }
 
 .team-container p {
-    font-size: 32px;
-    color: var(--h3);
-    margin-bottom: 67px;
-    text-align: center;
-} 
+  font-size: 32px;
+  color: var(--h3);
+  margin-bottom: 67px;
+  text-align: center;
+}
 
 .card-team img {
-    height: 360px;
-    border-radius: 32px;    
+  height: 360px;
+  border-radius: 32px;
 }
 
 .card-team {
-    flex: 0 0 400px;
-    text-align: center;
-    
+  flex: 0 0 400px;
+  text-align: center;
 }
 
 .card-team h1 {
-    font-size: 20px;
-    font-family: var(--font-inter);
-    font-weight: 700;
+  font-size: 20px;
+  font-family: var(--font-inter);
+  font-weight: 700;
 
-    color: var(--h3);
-    margin-top: 20px;
-    margin-bottom: 8px;
+  color: var(--h3);
+  margin-top: 20px;
+  margin-bottom: 8px;
 }
 
 .card-team p {
-    font-size: 16px;
-    font-family: var(--font-inter);
-    font-weight: 400;
+  font-size: 16px;
+  font-family: var(--font-inter);
+  font-weight: 400;
 
-    margin-bottom: 32px;
+  margin-bottom: 32px;
 
-    color: var(--h3);
+  color: var(--h3);
 }
 
 .container-team-card {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 
-    gap: 0 120px;
-    max-width: 920px;
-    
+  gap: 0 120px;
+  max-width: 920px;
 }
 
 /* SECTION - SERVICES */
 
 .services {
-    background: var(--h2);
-    height: 576px;
+  background: var(--h2);
+  height: 576px;
 
-    display: flex;
-    justify-content: center;
-    
+  display: flex;
+  justify-content: center;
 }
 
 .services-container h1 {
-    font-size: 48px;
-    color: var(--b1);
-    font-weight: 700;
+  font-size: 48px;
+  color: var(--b1);
+  font-weight: 700;
 
-    margin-top: 64px;
-    margin-bottom:39px;
+  margin-top: 64px;
+  margin-bottom: 39px;
 
-    text-align: center;
-    
+  text-align: center;
 }
 
 .title-content {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .card-service h2 {
-    font-size: 25px;
-    color: var(--h3);
-    font-weight: 700;
+  font-size: 25px;
+  color: var(--h3);
+  font-weight: 700;
+}
+
+.card-service img {
+  width: 340px;
+  height: 264px;
+  border-top-left-radius: 32px;
+  border-top-right-radius: 32px;
 }
 
 .card-service {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 
-    background: var(--b1);
-    border-radius: 32px;
+  background: var(--b1);
+  border-radius: 32px;
 
-    width: 340px;
-    height: 340px;
-
+  width: 340px;
+  height: 340px;
 }
 
 .container-services-card {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 
-    gap: 0 66px;
+  gap: 0 66px;
 }
 
 /* ================= NOTEBOOK ================= */
