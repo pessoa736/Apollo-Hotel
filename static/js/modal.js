@@ -19,3 +19,14 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+
+const toggle = document.querySelector(".menu-toggle");
+const menu = document.querySelector(".navbar-menu");
+
+toggle.onclick = () => {
+  menu.classList.toggle("active");
+
+  // troca ícone
+  toggle.classList.toggle("bi-list");
+  toggle.classList.toggle("bi-x");
+};

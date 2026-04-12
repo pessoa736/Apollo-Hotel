@@ -131,7 +131,7 @@ main h2 {
   padding-right: 0;
 }
 
-.card .infos button {
+.card .infos button, .card .infos a {
   padding: 12px 24px;
   background: var(--h3);
   color: var(--b1);
@@ -142,9 +142,10 @@ main h2 {
   transition: 0.3s;
   white-space: nowrap;
   min-width: max-content;
+  text-decoration: none;
 }
 
-.card button:hover {
+.card a:hover {
   opacity: 0.85;
 }
 
@@ -292,5 +293,11 @@ main h2 {
 
   .data {
     font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    margin-bottom: 10px;
   }
 }

@@ -212,7 +212,18 @@ article .autor {
   }
 
   .conteudo .img-texto {
-    grid-template-columns: 1fr;
+    flex-direction: column; /* ← era grid, agora empilha */
+  }
+
+  .img-texto .img-sec {
+    flex: unset;
+    width: 100%;
+  }
+
+  .img-texto .texto {
+    flex: unset;
+    width: 100%;
+    padding-left: 0; /* remove o recuo lateral */
   }
 
   .botao {

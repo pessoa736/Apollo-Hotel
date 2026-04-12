@@ -1,56 +1,53 @@
 /* -- Global -- */
 @import "global.css";
 
-
 /* -- Geral -- */
 body {
-    font-family: var(--font-family);
-    background: var(--b1);
+  font-family: var(--font-family);
+  background: var(--b1);
 }
 
-
 /* -- Navbar -- */
-.cutom-navbar {
-    display: flex;
-    width: 100%;
+.custom-navbar {
+  display: flex;
+  width: 100%;
 }
 
 .navbar-content {
-    height: 104px;
-    width: 100%;
-    
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 34px;
+  height: 104px;
+  width: 100%;
 
-    background: var(--h2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 34px;
 
-    font-size: 32px;
+  background: var(--h2);
 
+  font-size: 32px;
 }
 
 .brand-navbar img {
-    height: 56px;
+  height: 56px;
 }
 
 .navbar-menu {
-    display: flex;
-    justify-content: space-between;
-    gap: 130px;
-    align-items: center;
-    
-    list-style: none;
+  display: flex;
+  justify-content: space-between;
+  gap: 130px;
+  align-items: center;
+
+  list-style: none;
 }
 
 .navbar-menu a {
-    text-decoration: none;
-    color: var(--b1);
+  text-decoration: none;
+  color: var(--b1);
 }
 
 .navbar-item {
-    font-weight: 400;
-    font-size: 32px;
+  font-weight: 400;
+  font-size: 32px;
 }
 
 nav .btn-nav {
@@ -65,7 +62,7 @@ nav .btn-nav {
 }
 
 nav .btn-nav:hover {
-  opacity: 0.8; 
+  opacity: 0.8;
 }
 
 /* -- footer -- */
@@ -138,4 +135,80 @@ footer span {
 
 .copy img {
   width: 33px;
+}
+
+.menu-toggle {
+  display: none;
+}
+/* ================= MOBILE NAVBAR ================= */
+@media (max-width: 768px) {
+  .navbar-menu {
+    position: absolute;
+    top: 104px;
+    right: 0;
+    width: 100%;
+    background: var(--h2);
+    z-index: 1;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+
+    padding: 40px 0;
+
+    display: none;
+  }
+
+  .navbar-menu.active {
+    display: flex;
+  }
+
+  .navbar-content {
+    position: relative;
+  }
+
+  /* botão hamburguer */
+  .menu-toggle {
+    display: block;
+    font-size: 32px;
+    color: var(--b1);
+    cursor: pointer;
+  }
+
+  /* esconde botão normal */
+  .btn-nav {
+    display: none;
+  }
+}
+
+/* ================= MOBILE FOOTER ================= */
+@media (max-width: 768px) {
+  footer .infos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+
+    text-align: center;
+  }
+
+  .redes,
+  .contatos {
+    align-items: center;
+  }
+
+  .rede,
+  .contato {
+    justify-content: center;
+  }
+
+  .localizacao img {
+    width: 220px;
+    height: auto;
+  }
+
+  .copy .text {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
 }

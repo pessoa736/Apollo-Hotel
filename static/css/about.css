@@ -41,7 +41,7 @@
 
 .about-container {
   display: flex;
-  gap: 60px; /* espaço entre texto e imagens */
+  gap: 60px;
   align-items: flex-start;
   padding-left: 144px;
   padding-right: 144px;
@@ -54,7 +54,7 @@
   flex-direction: column;
 }
 .about-images img {
-  width: 400px; /* controla o tamanho */
+  width: 400px;
   height: 300px;
   object-fit: cover;
 }
@@ -267,103 +267,188 @@
   gap: 0 66px;
 }
 
-/* ================= NOTEBOOK ================= */
-@media (max-width: 1768px) {
-  .hero-sobre h1 {
-    font-size: 56px;
-  }
-  .hero-sobre p {
-    font-size: 26px;
+/* =============================================
+   RESPONSIVIDADE — Mobile
+   ============================================= */
+
+@media (max-width: 768px) {
+  /* --- HERO --- */
+  .hero {
+    height: auto;
+    padding: 48px 24px;
+    text-align: center;
   }
 
-  .historia-texto p {
-    font-size: 22px;
-    text-indent: 40px;
+  .hero h1 {
+    font-size: 36px;
+    margin-top: 0;
+    margin-bottom: 16px;
+  }
+
+  .hero p {
+    font-size: 20px;
+  }
+
+  /* --- ABOUT (História) --- */
+  .about {
+    height: auto;
+  }
+
+  .about-container {
+    flex-direction: column;
+    padding: 40px 24px;
+    gap: 32px;
+    align-items: center;
+  }
+
+  .about-images {
+    width: 100%;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .about-images img {
+    width: 100%;
+    height: 220px;
+  }
+
+  .about-text {
+    max-width: 100%;
+  }
+
+  .about-title {
+    font-size: 28px;
+    display: block;
+    margin-bottom: 12px;
+  }
+
+  .about-text p {
+    font-size: 18px;
+  }
+
+  /* --- MISSION --- */
+  .mission {
+    height: auto;
+  }
+
+  .mission-container {
+    flex-direction: column;
+    align-items: center;
+    margin: 48px 24px;
+    gap: 24px;
+  }
+
+  .card {
+    width: 100%;
+    height: auto;
+    padding: 32px 24px;
+    border-radius: 24px;
+  }
+
+  .card-body h1 {
+    font-size: 28px;
+    margin-bottom: 16px;
+  }
+
+  .card-body p {
+    font-size: 18px;
+  }
+
+  .card-body img {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 20px;
+  }
+
+  /* --- TEAM --- */
+  .team-container {
+    margin-top: 48px;
+    margin-bottom: 24px;
+    padding: 0 24px;
+  }
+
+  .team-container h1 {
+    font-size: 36px;
+  }
+
+  .team-container p {
+    font-size: 20px;
     margin-bottom: 40px;
   }
 
-  .card {
-    font-size: 22px;
+  .container-team-card {
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    max-width: 100%;
   }
-  .equipe,
-  .servicos {
-    font-size: 28px;
+
+  .card-team {
+    flex: unset;
+    width: 100%;
+    max-width: 340px;
   }
-  .servico span {
-    font-size: 26px;
+
+  .card-team img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* --- SERVICES --- */
+  .services {
+    height: auto;
+    padding-bottom: 48px;
+  }
+
+  .services-container h1 {
+    font-size: 32px;
+    margin-top: 40px;
+    margin-bottom: 24px;
+  }
+
+  .container-services-card {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .card-service {
+    width: 90%;
+    height: auto;
+  }
+
+  .card-service img {
+    width: 100%;
+    height: 200px;
+  }
+
+  .card-service h2 {
+    font-size: 20px;
   }
 }
 
-/* ================= MOBILE ================= */
-@media (max-width: 768px) {
-  /* HERO */
-  .hero-sobre {
-    padding: 60px 20px;
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 28px;
   }
 
-  .hero-sobre h1 {
-    font-size: 34px;
+  .hero p {
+    font-size: 16px;
   }
 
-  .hero-sobre p {
-    font-size: 18px;
+  .about-title {
+    font-size: 24px;
   }
 
-  /* HISTÓRIA */
-  .historia {
-    padding: 60px 25px;
+  .about-text p {
+    font-size: 16px;
   }
 
-  .historia-container {
-    display: flex;
-    flex-direction: column;
+  .card-body h1 {
+    font-size: 24px;
   }
 
-  .historia-texto p {
-    font-size: 18px;
-    margin-bottom: 25px;
-  }
-
-  /* CARDS */
-  .mvv {
-    padding: 60px 25px;
-  }
-
-  .cards {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .card {
-    padding: 25px;
-    font-size: 18px;
-  }
-
-  /* EQUIPE */
-  .equipe {
-    padding: 60px 25px;
-    font-size: 26px;
-  }
-
-  .equipe-grid {
-    display: flex;
-    flex-direction: column;
-  }
-
-  /* SERVIÇOS */
-  .servicos {
-    padding: 60px 25px;
-    font-size: 26px;
-  }
-
-  .servicos-grid {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .servico span {
-    font-size: 20px;
+  .card-body p {
+    font-size: 16px;
   }
 }
