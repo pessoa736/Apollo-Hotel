@@ -1,0 +1,108 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block styles %} <link rel="stylesheet" href="{% static 'css/about.css' %}"> {% endblock %}
+
+{% block title %} <title>Sobre Nós</title> {% endblock %}
+
+{% block content %}
+    <main>
+        
+        <section class="hero">
+            <h1>Sobre Nós</h1>
+            <p>Conheça a história por trás de nosso Hotel!</p>
+        </section>
+
+        <section class="about">
+            <div class="about-container">
+
+                <div class="about-text">
+                    <p class="p-inicial"><span class="about-title">Nossa História</span> 
+                    lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in diam  nec leo posuere sodales. Sed scelerisque condimentum nulla vel suscipit. Integer pulvinar velit et quam auctor tempus. Ut maximus libero in  bibendum volutpat, scelerisque condimentum nulla vel suscipit.</p>
+            
+                    <p>Nullam viverra odio nec bibendum pellentesque.  Praesent lacinia purus risus, porttitor efficitur elit hendrerit et.  Etiam ligula nisi, efficitur in elit at, finibus tincidunt sapien. Ut  pharetra vitae tellus vel sodales. Ut euismod finibus ex, Integer pulvinar velit actor.</p>
+              
+                </div>
+                
+                <div class="about-images">
+                {% for history in history %}
+                    <img src="{{ history.image.url }}" alt="Sobre Nós">
+                    {% endfor %}
+                </div>
+                
+          
+            </div>
+        </section>
+
+        <section class="mission">
+            <div class="mission-container">
+                
+                <div class="card">
+                  <div class="card-body">
+                    <img src="{% static 'icons/icon-circles.svg' %}" alt="Missão">
+                    <h1 class="card-subtitle mb-2 text-body-secondary">Missão</h1>
+                    <p class="card-text">porttitor efficitur elit hendrerit et. Praesent lacinia purus risus ut pharetra vitae tellus vel sodales linkus. Ut maximus libero in  bibendum.</p>
+                  </div>
+                </div>
+
+                <div class="card">
+                  <div class="card-body">
+                    <img src="{% static 'icons/icon-sparkles.svg' %}" alt="Missão">
+                    <h1 class="card-subtitle mb-2 text-body-secondary">Visão</h1>
+                    <p class="card-text">praesent lacinia purus risus, porttitor efficitur elit hendrerit et, sed scelerisque condimentum nulla ligula rito revali ascendum topum det mundum.</p>
+                  </div>
+                </div>
+
+                <div class="card">
+                  <div class="card-body">
+                    <img src="{% static 'icons/icon-heart.svg' %}" alt="Missão">
+                    <h1 class="card-subtitle mb-2 text-body-secondary">Valores</h1>
+                    <p class="card-text">nullam viverra odio nec bibendum pellentesque. Praesent lacinia purus risus. Euismod finibus ex integer, lorem ipsum dolor sit amet, bafum dat selvaegenus, lacrimat dut reinus.</p>
+                  </div>
+                </div>
+
+
+            </div>
+        </section>
+
+        <section class="team">
+            <div class="team-container">
+                
+                <h1>Nossa Equipe</h1>
+                <p>Conheça os profissionais mais talentosos da casa!</p>
+                
+                <div class="container-team-card">
+                    {% for equipe in equipes %}
+                    <div class="card-team">
+                        <img src="{{ equipe.image.url }}" class="card-img-top" alt="Funcionário 1">
+                        <h1>{{ equipe.name }}</h1>
+                        <p class="card-text">{{ equipe.role }}</p>
+                    </div>                    
+                    {% endfor %}
+                </div>
+            
+            
+            </div>
+        </section>
+
+        <section class="services">
+            <div class="services-container">
+                <h1>Nossos Serviços</h1>
+
+                <div class="container-services-card">
+                    {% for service in services %}
+                    <div class="card-service">
+                        <img src="{{ service.image.url }}" alt="Serviço 1">
+                        <div class="title-content">
+                            <h2>{{ service.title }}</h2>
+                        </div>
+                    </div>
+                    {% endfor %}
+
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+    {% endblock %}

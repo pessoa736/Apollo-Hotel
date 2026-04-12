@@ -1,0 +1,55 @@
+{% extends "base.html" %} {% load static %} {% block styles %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/details.css' %}" />
+
+{% block title %} <title>Detalhes</title> {% endblock %}
+
+{% endblock %} {% block content %}
+<!-- ================= MAIN ================= -->
+<main>
+  <article>
+    <div class="titulo">
+      <h3>{{ post.title }}</h3>
+    </div>
+    <div class="artigo">
+      <div class="autor">
+        <div class="foto">
+          <img src="{{ post.user_img.url }}" alt="Autor(a) do post" />
+        </div>
+        <div class="infos">
+          <div class="nome">
+            <p>Por <span class="nome-autor">{{ post.user }}</span></p>
+          </div>
+          <div class="data">
+            <p>{{ post.created_at }}</p>
+          </div>
+        </div>
+      </div>
+      <div class="conteudo">
+        <div class="img-principal">
+          <img src="{% static 'img/card-img.png' %}" alt="Teatro" />
+          <div class="legenda">
+            <span>Legenda da imagem</span>
+          </div>
+        </div>
+        <div class="paragrafos">
+          {{ post.body|safe }}
+
+          <div class="img-texto">
+            <div class="img-sec">
+              <img src="{% static 'img/image4.png' %}" alt="Bar" />
+              <div class="legenda">
+                <span>Legenda da imagem</span>
+              </div>
+            </div>
+            <div class="texto"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="botao">
+      <a href="{% url 'blog' %}">Voltar ao Blog</a>
+    </div>
+  </article>
+</main>
+{% endblock %}

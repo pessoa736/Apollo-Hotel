@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block styles %} <link rel="stylesheet" href="{% static 'css/blog.css' %}"> {% endblock %}
+
+{% block title %} <title>Blog</title> {% endblock %}
+
+  {% block content %}
+    <!-- ================= HERO ================= -->
+    <section class="hero" style="background-image: url('{{ blog.image.url }}'); background-position: center; background-size: cover; background-repeat: no-repeat;">
+      <div class="info">
+        <h1>Destinos a dois perto de você</h1>
+        <h3>
+          Dicas lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
+          mollis donec, tellus sed eu scelerisque...
+        </h3>
+        <button type="button">Ler Mais</button>
+      </div>
+    </section>
+
+    <!-- ================= MAIN ================= -->
+    <main>
+      <h2>Não perca essas dicas!</h2>
+
+      <section class="cards">
+        <!-- CARD 1 -->
+        {% for post in posts %}
+        <article class="card">
+          <div class="img">
+            <img src="{{ post.image.url}}" alt="Teatro em Mônaco" />
+          </div>
+
+          <div class="card-body">
+            <h4>{{ post.title }}</h4>
+            <p>
+              {{ post.description }}
+            </p>
+
+            <div class="infos">
+              <time class="data" datetime="{{ post.created_at|date:'Y-m-d' }}">{{ post.created_at|date:'d/m/Y' }}</time>
+              <a href="{% url 'details' post.pk %}">Ler mais</a>
+            </div>
+          </div>
+        </article>
+        {% endfor %}
+        
+      </section>
+    </main>
+  {% endblock %}

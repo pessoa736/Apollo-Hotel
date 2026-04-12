@@ -1,0 +1,308 @@
+/* ================= HERO ================= */
+.hero {
+  height: calc(100vh - 104px);
+  /* background: url("../images/hotel.png") center center/cover no-repeat; */
+  position: relative;
+}
+
+.hero-overlay {
+  height: 100%;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  text-align: center;
+  color: var(--b1);
+  padding: 20px;
+}
+
+.hero h1 {
+  font-size: 64px;
+}
+.hero p {
+  font-size: 32px;
+  max-width: 700px;
+}
+
+.btn-primary {
+  background: var(--h3);
+  color: var(--b1);
+  padding: 14px 28px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-size: 22px;
+  transition: 0.3s;
+}
+.btn-primary:hover {
+  opacity: 0.85;
+}
+
+/* ================= BENEFÍCIOS ================= */
+.beneficios {
+  background: var(--h1);
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.beneficios h2 {
+  color: var(--h2);
+  margin-bottom: 48px;
+  font-style: italic;
+}
+
+.cards-beneficios {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  flex-wrap: wrap;
+}
+
+.card-beneficio {
+  width: 360px;
+  height: 340px;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 10px #00000033;
+  transition: all 0.7s ease;
+}
+
+.card-beneficio img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+}
+
+.card-beneficio span {
+  display: block;
+  padding: 16px;
+  font-size: 28px;
+  font-weight: bold;
+  color: var(--h2);
+}
+
+.card-beneficio:hover {
+  transform: scale(1.05);
+}
+
+/* ================= PACOTES ================= */
+.pacotes {
+  background: url("../images/quarto.png") center/cover no-repeat;
+  padding: 80px 10%;
+  color: var(--b1);
+  position: relative;
+}
+
+.pacotes::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #00000080;
+  pointer-events: none;
+}
+
+.pacotes-content {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+.pacotes-texto {
+  width: 50%;
+  text-align: center;
+}
+
+.pacotes-texto h2 {
+  font-size: 46px;
+}
+.pacotes-texto p {
+  margin: 16px 0 24px;
+  font-size: 30px;
+}
+
+.pacotes-imagens {
+  position: relative;
+  width: 50%;
+  height: 320px;
+}
+
+.pacotes-imagens img {
+  position: absolute;
+  object-fit: cover;
+}
+
+/* imagem grande (principal) */
+.pacotes-imagens img:nth-child(1) {
+  width: 260px;
+  height: 180px;
+  z-index: 0.1;
+  top: 100px;
+  left: 0;
+}
+
+/* topo direita */
+.pacotes-imagens img:nth-child(2) {
+  width: 260px;
+  height: 180px;
+  top: 0;
+  right: 100px;
+}
+
+/* meio direita */
+.pacotes-imagens img:nth-child(3) {
+  width: 260px;
+  height: 180px;
+  bottom: 0;
+  right: 100px;
+}
+
+/* ================= GALERIA ================= */
+.galeria {
+  background: var(--h2);
+  padding: 80px 20px;
+  text-align: center;
+  color: var(--b1);
+}
+
+.galeria h2 {
+  margin-bottom: 40px;
+}
+
+.galeria-slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.slide {
+  position: relative;
+  max-width: 800px;
+}
+
+.slide img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.slide span {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  background: #00000099;
+}
+
+/* ===== SLIDER FUNCIONAL ===== */
+
+.galeria-slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.slider-container {
+  width: 100%;
+  max-width: 900px; /* ← limite do slider */
+  overflow: hidden;
+}
+
+.slider-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.slide {
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+/* LIMITANDO TAMANHO DA IMAGEM */
+.slide img {
+  width: 100%;
+  max-width: 900px;
+  height: 480px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.slide span {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  padding: 12px;
+  background: #00000099;
+  border-radius: 0 0 12px 12px;
+}
+
+.arrow {
+  background: none;
+  border: none;
+  font-size: 40px;
+  color: var(--b1);
+  cursor: pointer;
+}
+
+/* ===== DOTS ===== */
+.dots {
+  margin-top: 24px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  background: #ffffff66;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.dot.active {
+  background: var(--b1);
+  transform: scale(1.2);
+}
+
+/* ================= NOTEBOOK ================= */
+
+@media (max-width: 1768px) {
+
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 36px;
+  }
+  .hero p {
+    font-size: 20px;
+  }
+
+  .pacotes-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .slider-container {
+    width: 100%;
+  }
+  .slide {
+    min-width: 100%;
+  }
+
+  .slide img {
+    height: 260px;
+  }
+}
