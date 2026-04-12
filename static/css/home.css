@@ -66,6 +66,7 @@
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 6px 10px #00000033;
+  transition: all 0.7s ease;
 }
 
 .card-beneficio img {
@@ -80,6 +81,10 @@
   font-size: 28px;
   font-weight: bold;
   color: var(--h2);
+}
+
+.card-beneficio:hover {
+  transform: scale(1.05);
 }
 
 /* ================= PACOTES ================= */

@@ -110,6 +110,11 @@
   align-items: center;
   padding: 20px;
   text-align: center;
+  transition: all 0.7s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
 }
 
 .card-body {
